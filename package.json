@@ -1,0 +1,16 @@
+{
+  "name": "proyectowebiiiparcial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "validaciones.js",
+  "scripts": {
+    "build": "purgecss --css sass/custom.css --content index.html -o sass/reducido.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "sass": "^1.54.0"
+  }
+}

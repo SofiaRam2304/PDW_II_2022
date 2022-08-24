@@ -1,0 +1,14 @@
+Integrantes Grupo # 1
+Página Web Feria Tecnológica
+
+Julio Alberto Velasquez Alvarez 0201200100620
+	> Página de Inicio
+	> Página de Temas (Tech Antigua/ Presente /Futura)
+
+Sofía Raquel Ramírez Rodriguez 0801199907288
+	> Página de Contactenos
+	> Página de Oradores Destacados
+
+Roger Yovany Paz Velasquez 1520200100086
+	> Página de Inscripciones
+	> Página de "Acerca de"

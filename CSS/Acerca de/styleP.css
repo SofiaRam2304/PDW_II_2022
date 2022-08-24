@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap'); /*Links de fuentes*/
+:root{
+    --blanco: #f7f3ee;
+    --Negro: #040716;
+    --degradado:linear-gradient(90deg, variable(--Negro),var(--blanco));
+    
+}
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px
+}
+
+    
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+*::selection{
+    background: var(--Negro);
+    color: white;
+    
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    background: URL(../../Imagenes/ImagenesExtra/2021-04-28-image-15.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+}
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: var(--degradado);
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0. 5rem 1rem rgba(0, 0, 0, .1);
+    transition: all .3s linear;
+}
+
+
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a8d8cd;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+header .logo{
+    font-size: 1rem;
+}
+
+
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--Negro);
+    text-decoration: none;
+}
+
+header .navbar a:hover{
+    color: var(--blanco);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 3rem;
+    color: var(--blanco);
+    cursor: (pointer);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.inicio{
+    display: center;
+    align-items: center;
+    justify-content: center;
+    background:  rgba(5, 80, 83); /*Aqui va el fondo de la url de la imagen descargada de la carpeta img2*/
+    background-size: cover;
+    background-position: center;
+
+}
+
+.inicio .image img{
+    width: 40vw;
+    animation: float 0s linear infinite;
+    border-radius: 50px;
+  
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.inicio .content h3{
+    font-size: 5.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.inicio .content h3 span{
+    color: var(--Negro);
+    text-transform: uppercase;
+}
+
+.inicio .content p{
+    font-size: 1.7rem;
+    color: white;
+    padding: 1rem 0;
+}
+
+@media (max-width:1200px){ /*Tamaño de pantalla para escritorios*/
+    html{
+    }
+}
+
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #b4c9b2;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+    .inicio{
+        flex-flow: column-reverse;
+    }
+    .inicio .image img{
+        width: 100%;
+        
+    }
+    .inicio .content h3{
+        font-size: 3.6rem;
+    }
+    .inicio .content p{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+}
+
+    
+ 
+ /**********contenido***********/
+
+ body{
+
+    width: 100%;
+    height: 100px; /*cambie hv por pixeles */
+    
+ }
+
+ .container{
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0px;
+ 
+ }
+ 
+ .container::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: url(../../Imagenes/Acerca\ de/wallpaper.jpg);
+    background-size: cover;
+    filter: blur(50px);
+    z-index: -1;
+ }
+ 
+ 
+ .column{
+    background-color: #fff;
+    height: 700px;
+    margin: 10%;
+    flex-direction: column;
+    box-shadow:  0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+ }
+
+ .column p{
+    text-align: justify;
+ }
+
+ 
+.foto{
+    background-position: center;
+    width: 80%;
+    height: 60%;
+    margin-bottom: 5%;
+    object-fit: cover;/*la imagen tenga proporcion */
+}
+h1{
+    margin-bottom: 10%;
+    font-size: 25px;
+    margin-left: 30px;
+}
+h2{
+    margin-bottom: 5%;
+}
+.column p{
+    padding: 0% 10%;
+    font-size: 15px;
+
+}
+.column a{
+    font-size: 20px;
+    margin-top: 1%;
+
+}
+.column a:hover{
+    color: #a8d8cd;
+    
+  
+    
+}
+
+@media screen and (max-width:880px) {
+ 
+    .column{
+        height: 700px;
+    }
+    .foto{
+        background-position: center;
+        width: 90%;
+        height: 40%;
+        margin-bottom: 5%;
+        margin-top: 0%;
+        object-fit:cover;
+    }
+    .column h2{
+        text-align: center;
+    }
+   
+}
+
+@media screen and (max-width:400px) {
+   
+    .column{
+        width: 300px;
+        height: 600px;
+    }
+    .titulo p{
+        font-size: 15px;
+    }
+    h1{
+        font-size: 20px;
+        
+        text-align: center;
+    }
+  
+    .column h2{
+        text-align: center;
+    }
+    .foto{
+        background-position: center;
+        width: 90%;
+        height: 25%;
+        margin-bottom: 5%;
+        margin-top: 0%;
+        object-fit:fill;
+    }
+}
+
+/********pie de pagina************/
+footer{
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+    position: relative;
+}
+
+.footer-content
+{
+    font-size: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: bottom;
+}
+
+.footer-content h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    font-size: 55%;
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 20px;
+    font-size: 14px;
+    margin:10px;
+    text-align: center;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color:aqua;
+}
+
+.footer-bottom{
+    background: rgba(243, 243, 243, 0.2);
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.portada{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    
+}
+
+.img{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+
+.container {
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.title {
+    color:#222b56;
+    background-color: rgba(255, 255, 255, 0.863);
+    text-align: center;
+    font-size: 3em;
+}
